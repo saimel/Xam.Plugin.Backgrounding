@@ -1,6 +1,6 @@
-# Backgrounding
+# Xam.Plugin.Backgrounding
 
-Cross platform API for running tasks in background.
+Cross platform API for running tasks in the background.
 
 ### Supported platforms
 
