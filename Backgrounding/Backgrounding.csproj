@@ -1,0 +1,35 @@
+<Project Sdk="MSBuild.Sdk.Extras/2.0.41">
+    
+    <PropertyGroup>
+        <TargetFrameworks>Xamarin.iOS10;MonoAndroid90;netstandard2.0</TargetFrameworks>
+        <PackOnBuild>true</PackOnBuild>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Saimel Saez</Authors>
+        <Owner>Saimel Saez</Owner>
+        <Company></Company>
+        <PackageProjectUrl>https://github.com/saimel/Xam.Plugin.Backgrounding</PackageProjectUrl>
+        <Title>Xam.Plugin.Backgrounding</Title>
+        <Description>Cross platform API for running tasks in background.</Description>
+        <PackageTags>Plugin; Xamarin Forms; Background; Tasks</PackageTags>
+
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+        <RootNamespace>Xam.Plugin.Backgrounding</RootNamespace>
+    </PropertyGroup>
+    
+    
+    <ItemGroup>
+        <Compile Include="**\*.shared.cs" />
+        
+        <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
+    </ItemGroup>
+    
+    <!--ANDROID FILES-->
+    <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+        <Compile Include="droid\*.cs" />
+    </ItemGroup>
+
+    <!--iOS FILES-->
+    <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+        <Compile Include="ios\*.cs" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Backgrounding.Demo.MainPage">
+
+    <ContentPage.Content>
+
+        <Grid Padding="12" ColumnSpacing="8" RowSpacing="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48" />
+                <RowDefinition Height="48" />
+                <RowDefinition Height="48" />
+                <RowDefinition Height="48" />
+
+                <RowDefinition Height="48" />
+                <RowDefinition Height="48" />
+                <RowDefinition Height="48" />
+                <RowDefinition Height="48" />
+
+                <RowDefinition Height="48" />
+                <RowDefinition Height="48" />
+            </Grid.RowDefinitions>
+
+            
+            <Button Text="Start" BackgroundColor="AliceBlue"
+                    FontSize="18"
+                    Command="{Binding StartCommand}"
+                    Grid.Row="4" Grid.Column="0" />
+
+            <Button Text="Stop" BackgroundColor="AliceBlue"
+                    FontSize="18"
+                    Command="{Binding StopCommand}"
+                    Grid.Row="4" Grid.Column="1" />
+
+            <Label Text="{Binding Counter}" TextColor="Black"
+                   FontSize="18" BackgroundColor="#F2F2F2"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Grid.Row="6" Grid.ColumnSpan="2" />
+
+        </Grid>
+
+    </ContentPage.Content>
+
+
+</ContentPage>
