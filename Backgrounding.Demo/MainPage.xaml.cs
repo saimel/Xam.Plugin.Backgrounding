@@ -52,7 +52,7 @@ namespace Backgrounding.Demo
             return new Command(() =>
             {
                 cts = new CancellationTokenSource();
-                CrossBackgroundTask.Current.Start(Test, cts, pm => Counter = pm.Data.ToString());
+                CrossBackgroundTask.Current.Start(DummyTask, cts, pm => Counter = pm.Data.ToString());
             });
         }
 
@@ -66,7 +66,7 @@ namespace Backgrounding.Demo
             });
         }
 
-        private async Task Test()
+        private async Task DummyTask()
         {
             try
             {
